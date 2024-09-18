@@ -49,6 +49,10 @@ class Vertex{
         return new Vertex(x-that.x, y-that.y);
     }
 
+    public Vertex normalized(){
+        return new Vertex(x / lenght(), y / lenght());
+    }
+
     public double distance(Vertex that){
         double x_diff = that.x-this.x;
         double y_diff = that.y-this.y;

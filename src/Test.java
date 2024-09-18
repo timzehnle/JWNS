@@ -13,6 +13,6 @@ public class Test {
         System.out.println(v1.lenght());
         System.out.println(v2.lenght());
         System.out.println(v1.equals(v3));
-           
+        System.out.println(v1.normalized());
     }
 }
