@@ -1,6 +1,6 @@
 package src;
 
-class Vertex{
+public class Vertex{
     public double x;
     public double y;
     public static int i;
@@ -21,7 +21,7 @@ class Vertex{
         y=y*s;
     }
 
-    public double lenght(){
+    public double length(){
         return Math.sqrt(x*x+y*y);
     }
 
@@ -49,9 +49,11 @@ class Vertex{
         return new Vertex(x-that.x, y-that.y);
     }
 
-    public Vertex normalized(){
-        return new Vertex(x / lenght(), y / lenght());
-    }
+    public void normalize() {
+        double factor = this.length();
+        x = x / factor;
+        y = y / factor;
+      }
 
     public double distance(Vertex that){
         double x_diff = that.x-this.x;

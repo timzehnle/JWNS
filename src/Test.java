@@ -10,9 +10,8 @@ public class Test {
         System.out.println(v2);
         System.out.println(v3);
         System.out.println(v4);
-        System.out.println(v1.lenght());
-        System.out.println(v2.lenght());
+        System.out.println(v1.length());
+        System.out.println(v2.length());
         System.out.println(v1.equals(v3));
-        System.out.println(v1.normalized());
     }
 }
