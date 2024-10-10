@@ -1,26 +1,28 @@
 package src;
-import java.awt.Graphics;
+
+import src.util.ShowInFrame;
 import javax.swing.JPanel;
 
-public class PaintableImage extends JPanel implements Paintable{
+public class PaintableImage extends JPanel implements Paintable {
 
     MyImage mi;
 
-    public PaintableImage(MyImage mi){
-        this.mi=mi;
-    }
-    
-    public PaintableImage(String name){
-        this.mi=new MyImage(name);
+    public PaintableImage(MyImage mi) {
+        this.mi = mi;
     }
 
-    @Override
-    public void paintTo(Graphics g) {
+    public PaintableImage(String name) {
+        this.mi = new MyImage(name);
+    }
+
+    public void paintTo(java.awt.Graphics g) {
         g.drawImage(mi.get(), 0, 0, this);
     }
-    
-    public static void main(String[] args){
-        PaintableImage pi = new PaintableImage("test.png");
-        System.out.println(pi.mi.get().getHeight(pi));
+
+    public static void main(String[] args) {
+        PaintableImage pi = new PaintableImage("1.png");
+        System.out.println("Breite: " + pi.mi.get().getWidth(pi) + " Höhe: " + pi.mi.get().getHeight(pi));
+        ShowInFrame.show(new PaintablePanel(pi));
     }
+
 }
